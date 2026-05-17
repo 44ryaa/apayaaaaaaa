@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Untuk Sayang 🌊</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ocean-love.css">
+</head>
+<body>
+
+<!-- START OVERLAY -->
+<div class="start-overlay" id="startOverlay">
+  <div class="so-emoji">🐋</div>
+  <h2>Ada sesuatu untukmu 💙</h2>
+  <p>Ketuk untuk membuka hadiah dari sayang</p>
+  <button class="start-btn" onclick="startExperience()">
+    <span>🌊</span> Buka Sekarang
+  </button>
+</div>
+
+<!-- HIDDEN YT PLAYER -->
+<iframe id="yt-frame"
+  src="about:blank"
+  allow="autoplay; encrypted-media"
+  frameborder="0">
+</iframe>
+
+<!-- MUSIC BAR -->
+<div class="music-bar hidden" id="musicBar">
+  <div class="music-eq" id="musicEq">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="music-title">🎵 Untuk Sayang</div>
+  <button class="music-toggle" id="musicToggle" onclick="toggleMusic()">⏸</button>
+</div>
+
+<div class="bubbles" id="bubbles"></div>
+<div class="floaters" id="floaters"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge fade-in" id="whaleBadge">🐋</div>
+  <h1 class="fade-in d1">Kamu adalah <em>lautan</em><br>dalam hidupku</h1>
+  <p class="hero-sub fade-in d2">Dalam dan penuh misteri, tenang namun luar biasa — seperti kamu yang selalu membuatku terpesona.</p>
+  <button class="heart-btn fade-in d3" id="heartBtn" onclick="sendLove()">
+    <span class="hb-icon">🤍</span>
+    <span id="heartText">Kirim cintamu</span>
+  </button>
+  <div class="heart-counter fade-in d4" id="heartCounter"></div>
+  <div class="scroll-hint fade-in d4">gulir ke bawah<span></span></div>
+</section>
+
+<div class="wave-divider">
+  <svg viewBox="0 0 1200 60" preserveAspectRatio="none">
+    <path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="rgba(8,31,107,0.2)"/>
+  </svg>
+</div>
+
+<!-- CARDS -->
+<div class="section reveal">
+  <p class="section-label">Penghuni lautan hati kita</p>
+  <h2>Ketuk kartu untuk pesan rahasia 🤫</h2>
+</div>
+<div class="cards reveal" id="cards"></div>
+
+<!-- LOVE METER -->
+<div class="love-meter-section reveal">
+  <h2>Seberapa besar cintaku? 🌊</h2>
+  <p class="sub">Ketuk tombol untuk mengukurnya</p>
+  <div class="meter-track"><div class="meter-fill" id="meterFill"></div></div>
+  <div class="meter-label" id="meterLabel">Belum diukur...</div>
+  <div class="meter-emoji" id="meterEmoji">🌊</div>
+  <button class="tap-me-btn" onclick="measureLove()">🐳 Ukur Cintaku</button>
+</div>
+
+<!-- MESSAGE -->
+<div class="message-wrap reveal">
+  <div class="message-box">
+    <span class="big-emoji">🪼</span>
+    <blockquote>"Seperti ubur-ubur yang mengalir mengikuti arus, aku akan selalu mengikuti ke mana pun cintamu membawaku — tanpa pertanyaan, tanpa keraguan."</blockquote>
+    <div class="signature">— untukmu, dari hatiku yang paling dalam 🌊</div>
+  </div>
+</div>
+
+<!-- WISHES -->
+<div class="wishes-section reveal">
+  <h2>Doa untukmu 💙</h2>
+  <p class="sub">Geser atau ketuk panah untuk membaca semua doanya</p>
+  <div class="wish-display" id="wishDisplay"></div>
+  <div class="wish-nav">
+    <button onclick="prevWish()">◀</button>
+    <button onclick="nextWish()">▶</button>
+  </div>
+</div>
+
+<!-- SECTION CLOSING -->
+<section class="section reveal" style="padding-bottom:2rem">
+  <p class="section-label">Pesanku</p>
+  <h2>Lebih dalam dari samudra mana pun</h2>
+  <p>Rasa sayangku padamu lebih dalam dari palung Mariana, lebih luas dari semua lautan di dunia, dan sepanjang ombak yang tak pernah berhenti menyentuh pantai — begitulah aku mencintaimu, tanpa henti.</p>
+</section>
+
+<footer>🐚 dibuat dengan cinta yang sedalam laut 🐚</footer>
+<div class="toast" id="toast"></div>
+
+<script src="ocean-love.js"></script>
+</body>
+</html>
